@@ -20,6 +20,7 @@ private slots:
 
 private:
     OpenGLRender *render = nullptr;
+	QSize oldSize = {0, 0};
 };
 
 #endif // OPENGLWIDGET_H

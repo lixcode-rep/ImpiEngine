@@ -11,15 +11,30 @@ Window
     width: 640
     height: 480
     title: qsTr("Hello World")
+	color: "transparent"
 
     Connections
     {
         target: qmlApp
     }
 
+	Rectangle {
+		x: 10;
+		y: 100;
+		width: 400
+		height: 450
+		color: "white"
+	}
+
     RowLayout
     {
-        anchors.fill: parent
+		anchors.left: parent.left
+		anchors.right: parent.horizontalCenter
+		anchors.top: parent.top
+		anchors.bottom: parent.bottom
+
+		visible: true
+
         ColumnLayout
         {
             ToolButton

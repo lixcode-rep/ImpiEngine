@@ -14,6 +14,9 @@ public:
 public slots:
     void paintGL();
     void resizeGL(const int w, const int h);
+
+private:
+	bool inited = false;
 };
 
 #endif // OPENGLRENDER_H

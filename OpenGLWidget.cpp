@@ -14,7 +14,11 @@ void OpenGLWidget::sync()
                 render, &OpenGLRender::paintGL);
     }
 
-    render->resizeGL(window()->width(), window()->height());
+	if (window()->size() != oldSize)
+	{
+		render->resizeGL(window()->width(), window()->height());
+		oldSize = window()->size();
+	}
 }
 
 void OpenGLWidget::cleanup()
